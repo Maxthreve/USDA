@@ -61,24 +61,61 @@ end
 
 
 # nutrition data file
+#
+# File.open("nutrData.txt") do |file|
+#   count = 0
+#   while(line = file.gets)
+#      l = line.split("^")
+#      n = []
+#      l.each do |i|
+#        temp = i.gsub(/~/, "").gsub(/\n/, "").rstrip()
+#        if temp != ""
+#          n << temp
+#        else
+#          n << "nil"
+#        end
+#
+#     #   count = count + 1
+#     #   puts count
+#     end
+#     f = "NutData.create( ndbID: '#{n[0]}', nutrID: '#{n[1]}', nutrVal: #{n[3]}, numDataPts: #{n[4]}, stdError: #{n[5]}, srcID: '#{n[6]}', deriveID: '#{n[7]}', refNdbID: '#{n[8]}', addNutrIND: '#{n[9]}', numStudies: #{n[10]}, min: #{n[11]}, max: #{n[12]}, lowEB: #{n[13]}, upEB: #{n[14]} , df:#{n[15]}, addModDate: '#{n[16]}', statCmt: '#{n[17]}', ccIND: '#{n[18]}')"
+#
+#   end
+# end
 
-File.open("nutrData.txt") do |file|
-  count = 0
-  while(line = file.gets)
-     l = line.split("^")
-     n = []
-     l.each do |i|
-       temp = i.gsub(/~/, "").gsub(/\n/, "").rstrip()
-       if temp != ""
-         n << temp
-       else
-         n << "nil"
-       end
+#weight File
 
-    #   count = count + 1
-    #   puts count
-    end
-    puts "NutData.create( ndbID: '#{n[0]}', nutrID: '#{n[1]}', nutrVal: #{n[3]}, numDataPts: #{n[4]}, stdError: #{n[5]}, srcID: '#{n[6]}', deriveID: '#{n[7]}', refNdbID: '#{n[8]}', addNutrIND: '#{n[9]}', numStudies: #{n[10]}, min: #{n[11]}, max: #{n[12]}, lowEB: #{n[13]}, upEB: #{n[14]} , df:#{n[15]}, addModDate: '#{n[16]}', statCmt: '#{n[17]}', ccIND: '#{n[18]}')"
+# File.open("weight.txt") do |file|
+#   while(line = file.gets)
+#     l = line.split("^")
+#     n = []
+#     l.each do |i|
+#       temp = i.gsub(/~/,"").gsub(/\n/, "").rstrip()
+#       if temp != ""
+#         n << temp
+#       else
+#         n << "nil"
+#       end
+#     end
+#   puts"Weight.create(ndbID: '#{n[0]}', seq: '#{n[1]}', amount: #{n[2]}, msreDesc: '#{n[3]}', gmWgt: #{n[4]}, numDataPts: #{n[5]}, stdDev: #{n[6]})"
+#   end
+#
+# end
 
-  end
-end
+#Langual file
+#
+# File.open("langaul.txt") do |file|
+#   while(line = file.gets)
+#     l = line.split("^")
+#     n = []
+#     l.each do |i|
+#       temp = i.gsub(/~/, "").gsub(/\n/,"").rstrip()
+#       if temp != ""
+#         n << temp
+#       else
+#         n << "nil"
+#       end
+#     end
+#     puts "Langual.create(ndbID: '#{n[0]}', factorID: '#{n[1]}')"
+#   end
+# end
