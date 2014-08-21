@@ -1,4 +1,4 @@
-output = File.open("test.rb", "w")
+output = File.open("test.txt", "w")
 
 
         #food desc
