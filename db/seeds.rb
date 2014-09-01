@@ -2,7 +2,7 @@ require 'zip'
 require 'pry'
 count = 0
 
-Zip::ZipFile.open("db/sr26.zip") do |zipfile|
+Zip::ZipFile.open("db/sr27.zip") do |zipfile|
 
   zipfile.get_entry("FOOD_DES.txt").extract
   File.foreach("FOOD_DES.txt") do |line|
