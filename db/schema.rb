@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140820011119) do
+ActiveRecord::Schema.define(version: 20140819004645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "data_src_lnks", force: true do |t|
+    t.string   "ndbID",      null: false
+    t.string   "nutrID",     null: false
+    t.string   "dataSrcID",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "ndbID"
-    t.string   "nutrID"
-    t.string   "dataSrcID"
   end
 
   create_table "data_srcs", force: true do |t|
